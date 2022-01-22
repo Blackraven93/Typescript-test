@@ -77,3 +77,39 @@
 #### TypeScript - Type Alias
 
 - 타입을 사용하여 객체의 형태뿐만 아니라 직접적으로 값을 지정해줄 수 있다.
+
+#### Type vs Interface
+
+- 언제 Type을 사용하고 Interface를 사용하는지 정리했다.
+- type은 새로운 속성을 추가하기 위해서 다시 같은 이름으로 선언할 수 없다
+- interface는 항상 선언적 확장이 가능하다
+
+```Typescript
+interface Bird {
+    name: string
+    isFly: boolean
+    color: string[]
+}
+interface Bird {
+    species: string
+}
+
+// 하지만 type은 Error 발생
+
+type Bird = {
+    name: string
+    isFly: boolean
+    color: string[]
+}
+type Bird = {
+    species: string
+}
+// Error: Duplicate identifier 'Bird'.
+```
+
+- Interface는 객체에만 이용가능하다.(객체를 사용하는 부분에서 interface를 사용하는 것이 좋음)
+- Type은 복수의 타입을 지정할 수 있다. (computed value)
+
+```Typescript
+type names = 'firstName' | 'lastName'
+```
