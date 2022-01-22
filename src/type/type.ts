@@ -1,8 +1,8 @@
-export {}
+export { }
 let foo: string = 'hello';
 let bar: number = 123;
 
-const multiply = (x:number, y:number): number => x * y
+const multiply = (x: number, y: number): number => x * y
 
 
 console.log(multiply(2, 5))
@@ -21,17 +21,17 @@ let octal: number = 0o744;
 let color: string = "blud";
 color = 'red';
 let myName: string = `Lee`;
-let greeting: string = `Hello, my name is ${ myName }`;
+let greeting: string = `Hello, my name is ${myName}`;
 console.log(greeting)
 
 const obj: object = {};
 
-let list1 :any[] = [1, "two", true];
+let list1: any[] = [1, "two", true];
 let list2: number[] = [1, 2, 3];
-let list3: Array<number> = [1,2,3]; // 제네릭 배열 타입
+let list3: Array<number> = [1, 2, 3]; // 제네릭 배열 타입
 
 // tuple
-let tuple:[string, number];
+let tuple: [string, number];
 
 tuple = ["hello", 10];
 tuple = ["10", "hello"] // error
@@ -39,19 +39,19 @@ tuple = ['hello', 10, 'world', 100] // error
 tuple.push(true) // error
 
 // enum: 열거형은 숫자값 집합에 이름을 지정한 것이다.
-enum Color1 {Red, Green, Blue};
+enum Color1 { Red, Green, Blue };
 let c0: Color1 = Color1.Red;
 let c1: Color1 = Color1.Green;
 
 console.log(c0)
 console.log(c1)
 
-enum Color2 {Red = 1, Green, Blue};
+enum Color2 { Red = 1, Green, Blue };
 let c2: Color2 = Color2.Green
 
 console.log(c2)
 
-enum Color3 {Red = 1, Green = 2, Blue = 4};
+enum Color3 { Red = 1, Green = 2, Blue = 4 };
 let c3: Color3 = Color3.Blue;
 
 console.log(c3); // 4
@@ -70,10 +70,10 @@ function warnUser(): void {
 
 // never : 결코 발생하지 않는 값
 function infiniteLoop(): never {
-    while (true) {}
+    while (true) { }
 }
 
-function error(message:string): never {
+function error(message: string): never {
     throw new Error(message);
 }
 
@@ -128,6 +128,7 @@ const _val = _$input.value;
 interface Car {
     name: string,
     year?: number
+    tire?: number
 }
 
 // 빈 객체를 Person 타입으로 지정
@@ -140,6 +141,7 @@ car.tire = 4; // error
 type Car2 = {
     name: string,
     year?: number
+    tire?: number
 }
 
 const car2 = {} as Car2;
@@ -161,7 +163,7 @@ type Name = 'Lee' | 'Kim';
 type Num = 1 | 2 | 3 | 4 | 5;
 
 // 객체 리터럴 유니온 타입으로 타입 지정
-type Obj = {a: 1} | {b: 2};
+type Obj = { a: 1 } | { b: 2 };
 
 // 함수 유니온 타입으로 타입 지정
 type Func = (() => string) | (() => void);
