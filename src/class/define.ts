@@ -77,7 +77,7 @@ class Bird {
 }
 
 const bird = new Bird("crow");
-console.log(bird)
+console.log(bird) // 
 
 class Animal {
     constructor(private x: string) {
