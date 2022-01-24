@@ -113,3 +113,7 @@ type Bird = {
 ```Typescript
 type names = 'firstName' | 'lastName'
 ```
+
+#### Generic
+
+- 클래스를 정의하는 시점에 매개변수나 반환값의 타입 선언이 어려운 경우

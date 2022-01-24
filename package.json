@@ -11,7 +11,7 @@
     "ts-node": "^10.4.0"
   },
   "scripts": {
-    "start": "tsc --watch -t es5 ./src/alias/alias.ts",
-    "start:js": "nodemon ./src/alias/alias.js"
+    "start": "tsc --watch -t es5 ./src/generic/generic.ts",
+    "start:js": "nodemon ./src/generic/generic.js"
   }
 }
