@@ -51,8 +51,7 @@ numberQueue.push(0);
 // numberQueue.push('1'); // 의도하지 않은 실수를 사전 검출 가능
 numberQueue.push(+'1');   // 실수를 사전 인지하고 수정할 수 있다
 
-// ?. => optional chaining
-// https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining
+
 console.log(numberQueue.pop()?.toFixed()); // 0
 console.log(numberQueue.pop()?.toFixed()); // 1
 console.log(numberQueue.pop()?.toFixed()); // undefined
